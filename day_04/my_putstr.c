@@ -7,7 +7,7 @@ int my_putstr(char *str);
 int main(int argc, char const *argv[])
 {
     char *str = "nathan";
-    
+
     my_putstr(str);
     return 0;
 }
