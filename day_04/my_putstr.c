@@ -1,29 +1,27 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int my_putchar(char c);
-int my_putstr(char *str);
+void my_putchar(char c);
+int my_putstr(char const *str);
 
 int main(int argc, char const *argv[])
 {
-    char *str = "nathan";
+    char *str = "phrase de test\n";
 
     my_putstr(str);
     return 0;
 }
 
-int my_putstr(char *str)
+int my_putstr(char const *str)
 {
-    int i = 0;
-
-    while (i <= 6)
+    for (int i = 0; str[i] != '\0'; i++)
     {
         my_putchar(str[i]);
-        i = i + 1;
     }
+    return 0;
 }
 
-int my_putchar(char c)
+void my_putchar(char c)
 {
     write(1, &c, 1);
 }

@@ -1,16 +1,16 @@
-NAME = do-op  # variable qui reçoit le nom de l'executable 
+NAME = do-op  
 
-SRC = do-op.c # variable qui accueil le/les fichier(s) a compiler si plusieurs ligne \ a la fin
+SRC = do-op.c
 
-all: $(NAME) # regle "name"
+all: $(NAME)
 
 $(NAME):
-	gcc -o $(NAME) $(SRC) # execution de règle toujours commencer par une tabulation
+	gcc -o $(NAME) $(SRC)
 	
-clean: # supprime tous les fichier o de la compilation
-	/bin/rm -f *.o # execute la regle
+clean: 
+	/bin/rm -f *.o
 
-fclean: clean # clean + clean executable .o + executable
-	/bin/rm -f $(NAME) # execute la regle
+fclean: clean
+	/bin/rm -f $(NAME)
 
-re: fclean all # reprend tout a 0 tout es nettoyer et recompiler
+re: fclean all
